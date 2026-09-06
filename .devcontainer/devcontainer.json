@@ -1,5 +1,5 @@
 {
-  "name": "Metasploitable Vulnerable Lab",
+  "name": "Metasploitable Secure Lab",
   "build": {
     "dockerfile": "Dockerfile"
   },
@@ -7,10 +7,11 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "redhat.vscode-yaml"
+        "eamodio.gitlens"
       ]
     }
   },
+  "remoteUser": "devuser",
   "forwardPorts": [21, 22, 80, 445, 3306],
-  "remoteUser": "root"
+  "postCreateCommand": "sudo service ssh start || true"
 }
